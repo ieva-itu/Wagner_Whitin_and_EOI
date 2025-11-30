@@ -581,7 +581,7 @@ if __name__ == "__main__":
     # ------------------------------------------------------------
     # Speed benchmark for different horizons n
     # ------------------------------------------------------------
-    ns_to_test = [10, 100, 1000, 10000]
+    ns_to_test = [10, 100, 1000]
     print("\nBenchmarking speed for horizons:", ns_to_test)
     speed_results = benchmark_speed_for_ns(
         ns=ns_to_test,
