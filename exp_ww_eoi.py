@@ -506,7 +506,7 @@ def plot_speed_scaling(speed_results: Dict[str, Any], filename: str) -> None:
     plt.xlabel("Horizon n (periods)")
     plt.ylabel("Average runtime (seconds)")
     plt.xscale("log")
-    plt.yscale("log")
+    plt.yscale("linear")
     plt.title("Runtime scaling: WW vs EOI")
     plt.legend()
     plt.tight_layout()
@@ -581,7 +581,7 @@ if __name__ == "__main__":
     # ------------------------------------------------------------
     # Speed benchmark for different horizons n
     # ------------------------------------------------------------
-    ns_to_test = [10, 100, 1000]
+    ns_to_test = [10, 20, 50, 100, 200, 300, 400, 500, 1000]
     print("\nBenchmarking speed for horizons:", ns_to_test)
     speed_results = benchmark_speed_for_ns(
         ns=ns_to_test,
